@@ -1,7 +1,6 @@
 html {
   box-sizing: border-box;
   background: black;
-  font-family:'helvetica neue';
   font-size: 20px;
   font-weight: 200;
   color: white;
@@ -19,7 +18,7 @@ body {
   width: 100%;
   display: inline-flex;
   position: fixed;
-  bottom: 0;
+  top: 0;
 }
 
 #projectWrap {
@@ -29,7 +28,7 @@ body {
 }
 
 .projects {
-  background:#6B0F9C;
+  background: url("https://i.giphy.com/zm2N7eBkFk6di.gif");
   box-shadow:inset 0 0 0 5px rgba(255,255,255,0.1);
   color:white;
   text-align: center;
@@ -55,17 +54,14 @@ h5 {
   width: 100%;
 }
 
-#aboutMe {
-  background-color: 
-}
-
-h3 {
+.appProj {
   background-color: black;
-  display: inline-flex; 
+  display: inline-flex;
   justify-content: center;
+  position: relative;
   box-sizing: border-box;
   height: 50px;
-  margin-bottom: 0px;
+  margin-top: 0px;
   line-height: 50px;
   width: 100%;
   font-family: 'PressStart2PRegular'; 
@@ -74,7 +70,7 @@ h3 {
 }
 
 #overlayText {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   position: absolute;
   top: 25%;
@@ -93,7 +89,7 @@ h3 {
   background-position: center top;
   background-repeat: no-repeat;
   width: 100%;
-  height: 350px;
+  height: 400px;
   -webkit-filter: blur(2px);
   -moz-filter: blur(2px);
   -o-filter: blur(2px);
@@ -119,8 +115,9 @@ h3 {
 .projectImg {
   display: inline-flex;
   width: 90%;
-  height: 300px;
+  height: 350px;
   margin-bottom: 50px;
+  border-radius: 25px;
 }
 
 a {
@@ -128,9 +125,55 @@ a {
 }
 
 .projectMove {
-  transition: all 300ms;
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
 }
 
 .blurb {
   font-family: 'PressStart2PRegular'; 
+}
+
+.ufo {
+  padding: 25px;
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+}
+
+.description {
+  padding: 25px;
+  padding-top: 0px;
+}
+
+.blurb {
+  padding: 25px;
+}
+
+.icons {
+  height: 50px;
+  width: 50px;
+  margin: 25px;
+}
+
+#email {
+  text-decoration: underline;
+}
+
+.hvr-grow {
+  display: inline-block;
+  transform-style: aqua;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  transform: scale(1.1);
 }

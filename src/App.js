@@ -6,8 +6,18 @@ import Contact from './Contact';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {match: 'Profile'};
+    this.state = {
+      match: 'Profile',
+      hover: false
+    };
     this.handleClick = this.handleClick.bind(this);
+    this.toggleHover = this.toggleHover.bind(this);
+  }
+
+  toggleHover(e) {
+    this.setState({
+      hover: e.target.id,
+    });
   }
 
   handleClick(e) {
@@ -17,6 +27,7 @@ class App extends React.Component {
   }
 
   render() {
+
     return (
       <div>
         <div>
@@ -28,9 +39,9 @@ class App extends React.Component {
         </div>
 
         <div id="appWrap">
-          <h3 id="Profile" onClick={this.handleClick}> About Me </h3>
-          <h3 id="Projects" onClick={this.handleClick}> Projects </h3>
-          <h3 id="Contact" onClick={this.handleClick}> Say Hi! </h3>
+          <h3 className="appProj" id="Profile" onClick={this.handleClick}> About Me </h3>
+          <h3 className="appProj" id="Projects" onClick={this.handleClick}> Projects </h3>
+          <h3 className="appProj" id="Contact" onClick={this.handleClick}> Say Hi! </h3>
         </div> 
 
         <div>
@@ -44,3 +55,15 @@ class App extends React.Component {
 }
 
 export default App;
+
+
+    // var linkStyle;
+
+    // if (this.state.hover) {
+    //   linkStyle = {backgroundImage: 'url(http://25.media.tumblr.com/d103eb823dce2842c673f409f036857b/tumblr_mzx9wrdwFa1snc5kxo1_500.gif)' };
+    // } else {
+    //   linkStyle = {backgroundImage: ''};
+    // }
+
+
+    // style={linkStyle} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}

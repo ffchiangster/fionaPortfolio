@@ -11,15 +11,19 @@ class Profile extends React.Component {
     return (
       <div className={this.props.match === 'Profile' ? 'show' : 'hide'}>
         <h5>Greetings</h5>
-        <div id="aboutMe">
-          <a href="http://github.com/ffchiangster">
-            <Github />
-          </a>
 
-          <a href="http://linkedin.com/in/ffchiang">
-            <Linkedin />
-          </a>
-        </div>
+        <h5>
+          Let's build something awesome together!
+        </h5>
+
+          <h5>
+            <a href="http://github.com/ffchiangster">
+              <Github className="icons hvr-grow" />
+            </a>
+            <a href="http://linkedin.com/in/ffchiang">
+              <Linkedin className="icons hvr-grow" />
+            </a>
+          </h5>
       </div>
     );
   }
